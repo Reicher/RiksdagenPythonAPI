@@ -25,6 +25,16 @@ class Votering:
         print(text)
 
 
+class Person:
+    def __init__(self, data):
+        self.data = data
+
+    def print(self):
+        text = ''
+        for key, value in self.data.items():
+            text += f'{key}: {value}\n'
+        print(text)
+
 class API:
     def __init__(self):
         self.url = 'http://data.riksdagen.se/'
@@ -43,6 +53,17 @@ class API:
 
         return response
 
+    def get_ledamoten(self):
+        response = self._get(self.url + 'personlista/',
+                             {'utformat' : 'json', 'sort': 'sorteringsnamn', 'sortorder': 'asc'})
+
+        data = response.json()['personlista']
+        person_list = []
+        for person_data in data['person']:
+            person_list.append(Person(person_data))
+
+        return person_list
+
     def get_voteringar(self, rm='', bet='', punkt='', parti='', valkrets='', rost='', antal='500', gruppering=''):
 
         response = self._get(self.url+'voteringlista/',
@@ -50,7 +71,7 @@ class API:
                              'rost': rost, 'sz': antal, 'utformat': 'json', 'gruppering': gruppering, })
 
         data = response.json()['voteringlista']
-        vote_list = [] 
+        vote_list = []
         for vote_data in data['votering']:
             vote_list.append(Votering(vote_data))
 
