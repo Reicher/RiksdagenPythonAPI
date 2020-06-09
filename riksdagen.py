@@ -1,6 +1,17 @@
 import requests
 import logging
-from xml.etree.ElementTree import fromstring, ElementTree
+from enum import Enum
+
+
+class Parti(Enum):
+    V = 0
+    S = 1
+    MP = 2
+    L = 3
+    C = 4
+    M = 5
+    SD = 6
+    KD = 7
 
 
 class Votering:
@@ -32,25 +43,18 @@ class API:
 
         return response
 
-    def get_voteringar(self, bet='', punkt='', parti='', valkrets='', rost='', antal='500', gruppering=''):
+    def get_voteringar(self, rm='', bet='', punkt='', parti='', valkrets='', rost='', antal='500', gruppering=''):
 
         response = self._get(self.url+'voteringlista/',
-                            {'bet': bet, 'punkt': punkt, 'parti': parti, 'valkrests': valkrets, 'iid': '',
-                            'rost': rost, 'sz': antal, 'utformat': 'xml', 'gruppering': gruppering})
+                            {'rm': rm, 'bet': bet, 'punkt': punkt, 'parti': parti, 'valkrests': valkrets, 'iid': '',
+                             'rost': rost, 'sz': antal, 'utformat': 'json', 'gruppering': gruppering, })
 
-        tree = ElementTree(fromstring(response.content))
-        root = tree.getroot()
-        logging.info(f'Got tree root: {root.tag}')
+        data = response.json()['voteringlista']
+        vote_list = [] 
+        for vote_data in data['votering']:
+            vote_list.append(Votering(vote_data))
 
-        voteringar = []
-        for votering in root:
-            data = {}
-            for info in votering:
-                data[info.tag] = info.text
-            voteringar.append(Votering(data))
-
-        return voteringar
-        logging.info('Done')
+        return vote_list
 
 
 
