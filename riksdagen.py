@@ -17,12 +17,14 @@ class Parti(Enum):
 class Votering:
     def __init__(self, data):
         self.data = data
+        self.namn = API.extract(data, 'namn')
+        self.ja = API.extract(data, 'Ja')
+        self.nej = API.extract(data, 'Nej')
+        self.franfarande = API.extract(data, 'Frånvarande')
+        self.avstar = API.extract(data, 'Avstår')
 
     def print(self):
-        text = ''
-        for key, value in self.data.items():
-            text += f'{key}: {value}\n'
-        print(text)
+        print(f'{self.namn}')
 
 
 class Person:
@@ -65,7 +67,7 @@ class API:
             logging.error(f'Could not get data from {url}, respons: {response.status_code}')
 
         data = response.json()[sub_url]
-        if data['@hits'] == '0':
+        if len(data) == 0:
             logging.error(f'0 Hits')
             return
         logging.info(f'Successfully got data')
@@ -85,11 +87,10 @@ class API:
 
     def get_voteringar(self, rm='', bet='', punkt='', parti='', valkrets='', rost='', antal='500', gruppering=''):
 
-        response = self._get(self.url, 'voteringlista',
+        data = self._get(self.url, 'voteringlista',
                             {'rm': rm, 'bet': bet, 'punkt': punkt, 'parti': parti, 'valkrests': valkrets, 'iid': '',
                              'rost': rost, 'sz': antal, 'utformat': 'json', 'gruppering': gruppering, })
 
-        data = response.json()['voteringlista']
         vote_list = []
         for vote_data in data['votering']:
             vote_list.append(Votering(vote_data))
