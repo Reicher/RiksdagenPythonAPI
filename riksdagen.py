@@ -39,13 +39,21 @@ class Person:
     def print(self):
         print(f'{self.tilltalsnamn} {self.efternamn} ({self.parti})')
 
+class Anforande:
+    def __init__(self, data):
+        self.data = data
+        self.avsnittsrubrik = API.extract(data, 'avsnittsrubrik')
+        self.talare = API.extract(data, 'talare')
+        self.parti = API.extract(data, 'parti')
+        self.replik = API.extract(data, 'replik')
+
+    def print(self):
+        print(f'{self.talare} om {self.avsnittsrubrik}. Replik: {self.replik}')
+
+
 class API:
     def __init__(self):
         self.url = 'http://data.riksdagen.se/'
-        logging.basicConfig(
-            format='%(asctime)s %(levelname)-8s %(message)s',
-            level=logging.INFO,
-            datefmt='%Y-%m-%d %H:%M:%S')
 
     @staticmethod
     def extract(data, param):
@@ -97,7 +105,16 @@ class API:
 
         return vote_list
 
-
+    def get_anforande(self, rm='', parti='', anftyp='', size='500'):
+        data = self._get(self.url, 'anforandelista',
+                             {'rm': rm, 'parti': parti, 'anftyp': anftyp,
+                              'utformat' : 'json', 'sz':size})
+        if not data:
+            return
+        anforande_list = []
+        for anforande_data in data['anforande']:
+            anforande_list.append(Anforande(anforande_data))
+        return anforande_list
 
 
 
