@@ -105,7 +105,7 @@ class API:
 
         return vote_list
 
-    def get_anforande(self, rm='', parti='', anftyp='', antal=500):
+    def get_anforande(self, rm='', parti='', anftyp='', antal=100):
         data = self._get(self.url, 'anforandelista',
                              {'rm': rm, 'parti': parti, 'anftyp': anftyp,
                               'utformat' : 'json', 'sz': antal})
