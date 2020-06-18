@@ -93,7 +93,7 @@ class API:
 
         return person_list
 
-    def get_voteringar(self, rm='', bet='', punkt='', parti='', valkrets='', rost='', antal='500', gruppering=''):
+    def get_voteringar(self, rm='', bet='', punkt='', parti='', valkrets='', rost='', antal=500, gruppering=''):
 
         data = self._get(self.url, 'voteringlista',
                             {'rm': rm, 'bet': bet, 'punkt': punkt, 'parti': parti, 'valkrests': valkrets, 'iid': '',
@@ -105,10 +105,10 @@ class API:
 
         return vote_list
 
-    def get_anforande(self, rm='', parti='', anftyp='', size='500'):
+    def get_anforande(self, rm='', parti='', anftyp='', antal=500):
         data = self._get(self.url, 'anforandelista',
                              {'rm': rm, 'parti': parti, 'anftyp': anftyp,
-                              'utformat' : 'json', 'sz':size})
+                              'utformat' : 'json', 'sz': antal})
         if not data:
             return
         anforande_list = []
