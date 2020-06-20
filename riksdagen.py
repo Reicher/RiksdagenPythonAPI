@@ -1,6 +1,7 @@
 import requests
 import logging
 from enum import Enum
+from typing import Dict
 
 
 class Parti(Enum):
@@ -12,6 +13,18 @@ class Parti(Enum):
     M = 5
     SD = 6
     KD = 7
+
+
+parti_namn: Dict[Parti, str] = {
+    Parti.V: "Vänsterpartiet",
+    Parti.S: "Sveriges socialdemokratiska arbetareparti ",
+    Parti.MP: "Miljöpartiet de gröna",
+    Parti.L: "Liberalerna",
+    Parti.C: "Centerpartiet",
+    Parti.M: "Moderata samlingspartiet",
+    Parti.SD: "Sverigedemokraterna",
+    Parti.KD: "Kristdemokraterna"
+}
 
 
 class Votering:
