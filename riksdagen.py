@@ -3,6 +3,7 @@ import logging
 from enum import Enum
 from typing import Dict
 
+logging.basicConfig(level=logging.ERROR)
 
 class Parti(Enum):
     V = 0
@@ -26,6 +27,10 @@ parti_namn: Dict[Parti, str] = {
     Parti.KD: "Kristdemokraterna"
 }
 
+riksmoten = ['1993/94', '1994/95', '1995/96', '1996/97', '1997/98', '1998/99', '1999/2000', '2000/01',
+             '2001/02', '2002/03', '2003/04', '2004/05', '2005/06', '2006/07', '2007/08', '2008/09', '2009/10',
+             '2010/11', '2011/12', '2012/13', '2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19',
+             '2019/20']
 
 class Votering:
     def __init__(self, data):
@@ -70,7 +75,7 @@ class API:
 
     @staticmethod
     def extract(data, param):
-        if not data[param]:
+        if not data or not data[param]:
             return None
 
         value = data[param]
@@ -83,7 +88,7 @@ class API:
     def _get(url, sub_url, params):
         response = requests.get(url+sub_url+'/', params=params)
 
-        logging.info(f'Doing request: {response.url + sub_url}')
+        logging.info(f'Doing request: {response.url}')
         if response.status_code != 200:
             logging.error(f'Could not get data from {url}, respons: {response.status_code}')
 
@@ -119,18 +124,25 @@ class API:
         return vote_list
 
     def get_anforande(self, rm='', parti='', anftyp='', antal=100):
+        anforande_list = []
         data = self._get(self.url, 'anforandelista',
                              {'rm': rm, 'parti': parti, 'anftyp': anftyp,
                               'utformat' : 'json', 'sz': antal})
-        if not data:
-            return
-        anforande_list = []
-        for anforande_data in data['anforande']:
-            anforande_list.append(Anforande(anforande_data))
 
         # Only special rule for a party, hate it. Because Folkpartiet changed name to Libreralerna
         if parti == Parti.L.name:
             anforande_list += self.get_anforande(rm=rm, parti='FP', anftyp=anftyp, antal=antal)
+
+        if not data:
+            return anforande_list
+
+        if data['@antal'] == '0':
+            logging.warning(f'No data for {rm}, {parti}, {anftyp}')
+        elif data['@antal'] == '1':
+            anforande_list.append(Anforande(data['anforande']))
+        else:
+            for anforande_data in data['anforande']:
+                anforande_list.append(Anforande(anforande_data))
 
         return anforande_list
 
