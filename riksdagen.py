@@ -18,7 +18,7 @@ class Parti(Enum):
 
 parti_namn: Dict[Parti, str] = {
     Parti.V: "Vänsterpartiet",
-    Parti.S: "Sveriges socialdemokratiska arbetareparti ",
+    Parti.S: "Sveriges socialdemokratiska arbetareparti",
     Parti.MP: "Miljöpartiet de gröna",
     Parti.L: "Liberalerna",
     Parti.C: "Centerpartiet",
