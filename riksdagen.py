@@ -127,6 +127,11 @@ class API:
         anforande_list = []
         for anforande_data in data['anforande']:
             anforande_list.append(Anforande(anforande_data))
+
+        # Only special rule for a party, hate it. Because Folkpartiet changed name to Libreralerna
+        if parti == Parti.L.name:
+            anforande_list += self.get_anforande(rm=rm, parti='FP', anftyp=anftyp, antal=antal)
+
         return anforande_list
 
 
