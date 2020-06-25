@@ -14,6 +14,7 @@ class Parti(Enum):
     M = 5
     SD = 6
     KD = 7
+    NYD = 8
 
 
 parti_namn: Dict[Parti, str] = {
@@ -24,7 +25,8 @@ parti_namn: Dict[Parti, str] = {
     Parti.C: "Centerpartiet",
     Parti.M: "Moderata samlingspartiet",
     Parti.SD: "Sverigedemokraterna",
-    Parti.KD: "Kristdemokraterna"
+    Parti.KD: "Kristdemokraterna",
+    Parti.NYD: "Ny demokrati"
 }
 
 riksmoten = ['1993/94', '1994/95', '1995/96', '1996/97', '1997/98', '1998/99', '1999/2000', '2000/01',
