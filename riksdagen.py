@@ -38,10 +38,10 @@ class Votering:
     def __init__(self, data):
         self.data = data
         self.namn = API.extract(data, 'namn')
-        self.ja = API.extract(data, 'Ja')
-        self.nej = API.extract(data, 'Nej')
-        self.franfarande = API.extract(data, 'Frånvarande')
-        self.avstar = API.extract(data, 'Avstår')
+        #self.ja = API.extract(data, 'Ja')
+        #self.nej = API.extract(data, 'Nej')
+        #self.franfarande = API.extract(data, 'Frånvarande')
+        #self.avstar = API.extract(data, 'Avstår')
 
     def print(self):
         print(f'{self.namn}')
@@ -113,15 +113,20 @@ class API:
 
         return person_list
 
-    def get_voteringar(self, rm='', bet='', punkt='', parti='', valkrets='', rost='', antal=500, gruppering=''):
+    def get_voteringar(self, rm='', hangar_id='', bet='', punkt='', parti='', valkrets='', rost='', antal=500, gruppering=''):
 
         data = self._get(self.url, 'voteringlista',
-                            {'rm': rm, 'bet': bet, 'punkt': punkt, 'parti': parti, 'valkrests': valkrets, 'iid': '',
+                            {'hangar_id': hangar_id, 'rm': rm, 'bet': bet, 'punkt': punkt, 'parti': parti, 'valkrests': valkrets, 'iid': '',
                              'rost': rost, 'sz': antal, 'utformat': 'json', 'gruppering': gruppering, })
 
         vote_list = []
-        for vote_data in data['votering']:
-            vote_list.append(Votering(vote_data))
+        if data['@antal'] == '0':
+            logging.warning(f'No data for.')
+        elif data['@antal'] == '1':
+            vote_list.append(Votering(data['votering']))
+        else:
+            for vote_data in data['votering']:
+                vote_list.append(Votering(vote_data))
 
         return vote_list
 
