@@ -34,5 +34,3 @@ To get an anföranden use get_anforande and add a couple of parameters if you wa
 ```python
 anforande_lista = api.get_anforande(rm='2019/20', parti=parti.name, anftyp='Nej')
 ```
-
-More examples can be found in /examples
