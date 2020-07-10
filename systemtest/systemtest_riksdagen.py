@@ -7,7 +7,7 @@ def test_age(self):
     max_age = {}
     party_members = {}
 
-    for p in riksdagen.Parti:
+    for p in riksdagen.Party:
         min_age[p.name] = 100
         max_age[p.name] = 0
         party_members[p.name] = 0
@@ -24,7 +24,7 @@ def test_age(self):
             max_age[P.parti] = age
         party_members[P.parti] += 1
 
-    for p in riksdagen.Parti:
+    for p in riksdagen.Party:
         print(
             f'{p.name} har {party_members[p.name]} riksdagsledamöten med yngsta {min_age[p.name]} och äldsta {max_age[p.name]}')
 
@@ -36,7 +36,7 @@ def test_gender_quota(self):
     personer = api.get_ledamoten()
     Male = {}
     Female = {}
-    for p in riksdagen.Parti:
+    for p in riksdagen.Party:
         Male[p.name] = 0
         Female[p.name] = 0
 
@@ -48,7 +48,7 @@ def test_gender_quota(self):
         elif P.kon == 'kvinna':
             Female[P.parti] += 1
 
-    for p in riksdagen.Parti:
+    for p in riksdagen.Party:
         F = Female[p.name]
         M = Male[p.name]
         try:
@@ -64,7 +64,7 @@ def test_most_common_words(self):
 
     api = riksdagen.API()
     common_words = {}
-    anforande_lista = api.get_anforande(rm='2019/20', parti=riksdagen.Parti.V.name, anftyp='Nej')
+    anforande_lista = api.get_anforande(rm='2019/20', parti=riksdagen.Party.V.name, anftyp='Nej')
 
     word_list = []
     for anförande in anforande_lista:

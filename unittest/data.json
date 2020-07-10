@@ -1,0 +1,1505 @@
+{
+
+  "personlista": {
+
+    "@systemdatum": "2020-07-04 13:32:44",
+
+    "@hits": "1",
+
+    "person": {
+
+      "hangar_guid": "5b6c0b08-8b7c-4a6d-b719-0f9fd3bb7d77",
+
+      "sourceid": "979e9852-69ed-4077-8140-52ab99414a6c",
+
+      "intressent_id": "014386615025",
+
+      "hangar_id": "2343623",
+
+      "fodd_ar": "1976",
+
+      "kon": "man",
+
+      "efternamn": "Esbati",
+
+      "tilltalsnamn": "Ali",
+
+      "sorteringsnamn": "Esbati,Ali",
+
+      "iort": null,
+
+      "parti": "V",
+
+      "valkrets": "Stockholms kommun",
+
+      "status": "Tjänstgörande riksdagsledamot",
+
+      "person_url_xml": "http://data.riksdagen.se/person/979e9852-69ed-4077-8140-52ab99414a6c",
+
+      "bild_url_80": "http://data.riksdagen.se/filarkiv/bilder/ledamot/979e9852-69ed-4077-8140-52ab99414a6c_80.jpg",
+
+      "bild_url_192": "http://data.riksdagen.se/filarkiv/bilder/ledamot/979e9852-69ed-4077-8140-52ab99414a6c_192.jpg",
+
+      "bild_url_max": "http://data.riksdagen.se/filarkiv/bilder/ledamot/979e9852-69ed-4077-8140-52ab99414a6c_max.jpg",
+
+      "personuppdrag": {
+
+        "uppdrag": [
+
+          {
+
+            "organ_kod": "kam",
+
+            "roll_kod": "Riksdagsledamot",
+
+            "ordningsnummer": "171",
+
+            "status": "Tjänstgörande",
+
+            "typ": "kammaruppdrag",
+
+            "from": "2018-09-24",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              {}
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "10",
+
+            "organ_sortering": "10",
+
+            "uppdrag_rollsortering": "60",
+
+            "uppdrag_statussortering": "10"
+
+          },
+
+          {
+
+            "organ_kod": "kam",
+
+            "roll_kod": "Riksdagsledamot",
+
+            "ordningsnummer": "210",
+
+            "status": "Tjänstgörande",
+
+            "typ": "kammaruppdrag",
+
+            "from": "2016-07-28",
+
+            "tom": "2018-09-24",
+
+            "uppgift": [
+
+              {}
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "10",
+
+            "organ_sortering": "10",
+
+            "uppdrag_rollsortering": "60",
+
+            "uppdrag_statussortering": "10"
+
+          },
+
+          {
+
+            "organ_kod": "kam",
+
+            "roll_kod": "Riksdagsledamot",
+
+            "ordningsnummer": "210",
+
+            "status": "Ledig",
+
+            "typ": "kammaruppdrag",
+
+            "from": "2016-05-12",
+
+            "tom": "2016-07-27",
+
+            "uppgift": [
+
+              "Jenny Bengtsson 2016-05-12 - 2016-07-27  Sjukledighet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "10",
+
+            "organ_sortering": "10",
+
+            "uppdrag_rollsortering": "60",
+
+            "uppdrag_statussortering": "30"
+
+          },
+
+          {
+
+            "organ_kod": "kam",
+
+            "roll_kod": "Riksdagsledamot",
+
+            "ordningsnummer": "210",
+
+            "status": "Tjänstgörande",
+
+            "typ": "kammaruppdrag",
+
+            "from": "2014-09-29",
+
+            "tom": "2016-05-11",
+
+            "uppgift": [
+
+              {}
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "10",
+
+            "organ_sortering": "10",
+
+            "uppdrag_rollsortering": "60",
+
+            "uppdrag_statussortering": "10"
+
+          },
+
+          {
+
+            "organ_kod": "kam",
+
+            "roll_kod": "Ersättare",
+
+            "ordningsnummer": "208",
+
+            "status": "Ersättare",
+
+            "typ": "kammaruppdrag",
+
+            "from": "2013-11-14",
+
+            "tom": "2014-09-29",
+
+            "uppgift": [
+
+              "Josefin Brink"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "45",
+
+            "organ_sortering": "10",
+
+            "uppdrag_rollsortering": "60",
+
+            "uppdrag_statussortering": "20"
+
+          },
+
+          {
+
+            "organ_kod": "kam",
+
+            "roll_kod": "Ersättare",
+
+            "ordningsnummer": "208",
+
+            "status": "Ersättare",
+
+            "typ": "kammaruppdrag",
+
+            "from": "2013-02-13",
+
+            "tom": "2013-04-30",
+
+            "uppgift": [
+
+              "Josefin Brink"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "45",
+
+            "organ_sortering": "10",
+
+            "uppdrag_rollsortering": "60",
+
+            "uppdrag_statussortering": "20"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Ledamot",
+
+            "ordningsnummer": "8",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2018-10-02",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "30",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "CU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "225",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Civilutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "FiU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "224",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Finansutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "FöU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "226",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Försvarsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "JuU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "226",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Justitieutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "KrU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "226",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Kulturutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "KU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "24",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2018-10-16",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Konstitutionsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "MJU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "228",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Miljö- och jordbruksutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "NU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "225",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Näringsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "SfU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "226",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Socialförsäkringsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "SkU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "225",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Skatteutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "SoU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "225",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Socialutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "TU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "225",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Trafikutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "UbU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "226",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Utbildningsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "UU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "224",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2020-03-18",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "Utrikesutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Ledamot",
+
+            "ordningsnummer": "15",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2014-10-07",
+
+            "tom": "2018-09-24",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "30",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "KU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "15",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2014-10-07",
+
+            "tom": "2018-09-24",
+
+            "uppgift": [
+
+              "Konstitutionsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "UU",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "24",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2014-10-14",
+
+            "tom": "2018-09-24",
+
+            "uppgift": [
+
+              "Utrikesutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Extra suppleant",
+
+            "ordningsnummer": "0",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2014-08-29",
+
+            "tom": "2014-09-29",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "55",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Extra suppleant",
+
+            "ordningsnummer": "0",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2014-07-03",
+
+            "tom": "2014-08-28",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "55",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Extra suppleant",
+
+            "ordningsnummer": "0",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2014-05-15",
+
+            "tom": "2014-07-02",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "55",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Extra suppleant",
+
+            "ordningsnummer": "0",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2014-03-20",
+
+            "tom": "2014-05-14",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "55",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Extra suppleant",
+
+            "ordningsnummer": "0",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2014-02-06",
+
+            "tom": "2014-03-19",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "55",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Extra suppleant",
+
+            "ordningsnummer": "0",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2013-12-18",
+
+            "tom": "2014-02-05",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "55",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Extra suppleant",
+
+            "ordningsnummer": "0",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2013-11-14",
+
+            "tom": "2013-12-17",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "55",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "AU",
+
+            "roll_kod": "Extra suppleant",
+
+            "ordningsnummer": "0",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2013-02-13",
+
+            "tom": "2013-04-30",
+
+            "uppgift": [
+
+              "Arbetsmarknadsutskottet"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "55",
+
+            "organ_sortering": "150",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "EUN",
+
+            "roll_kod": "Suppleant",
+
+            "ordningsnummer": "82",
+
+            "status": null,
+
+            "typ": "uppdrag",
+
+            "from": "2019-03-13",
+
+            "tom": "2022-09-26",
+
+            "uppgift": [
+
+              "EU-nämnden"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "50",
+
+            "organ_sortering": "170",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          },
+
+          {
+
+            "organ_kod": "RB",
+
+            "roll_kod": "Ledamot",
+
+            "ordningsnummer": "8",
+
+            "status": null,
+
+            "typ": "Riksdagsorgan",
+
+            "from": "2018-10-09",
+
+            "tom": "2022-10-09",
+
+            "uppgift": [
+
+              "Riksbanksfullmäktige"
+
+            ],
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623",
+
+            "sortering": "30",
+
+            "organ_sortering": "300",
+
+            "uppdrag_rollsortering": "90",
+
+            "uppdrag_statussortering": "90"
+
+          }
+
+        ]
+
+      },
+
+      "personuppgift": {
+
+        "uppgift": [
+
+          {
+
+            "kod": "Uppdrag inom riksdag och regering",
+
+            "uppgift": [
+
+              "Riksdagsledamot 14- (ersättare 130213-130430 och 131114-140929). Ledamot arbetsmarknadsutskottet 14-. Suppleant utrikesutskottet 14-18, konstitutionsutskottet 14- och EU-nämnden 19-. Extra suppleant arbetsmarknadsutskottet 13 och 14. Ledamot riksbanksfullmäktige 18-."
+
+            ],
+
+            "typ": "biografi",
+
+            "intressent_id": null,
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "Föräldrar",
+
+            "uppgift": [
+
+              "Ekonomen och taxichauffören Mohammad Taghi Esbati och ekonomen Parvin Eftekhari."
+
+            ],
+
+            "typ": "biografi",
+
+            "intressent_id": null,
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "Utbildning",
+
+            "uppgift": [
+
+              "Danderyds gymnasium och Tensta gymnasium, slutår 95. Civilekonomexamen, Handelshögskolan i Stockholm, examen 04. Stockholms universitet, kurser i ryska, matematik och filosofi."
+
+            ],
+
+            "typ": "biografi",
+
+            "intressent_id": null,
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "Anställningar",
+
+            "uppgift": [
+
+              "Internationell sekreterare, Ung Vänster 95-96. Förbundsordförande, Ung Vänster 01-04. Politisk sekreterare/ekonom, Vänsterpartiets riksdagskansli 05-07. Debattredaktör, Tidningen Klassekampen, Oslo 08. Utredare/Verksamhetschef, Manifest senter for samfunnsanalyse, Oslo 09-13."
+
+            ],
+
+            "typ": "biografi",
+
+            "intressent_id": null,
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "Uppdrag inom statliga myndigheter m.m.",
+
+            "uppgift": [
+
+              "Ledamot Upphandlingsmyndighetens insynsråd 16-.  "
+
+            ],
+
+            "typ": "biografi",
+
+            "intressent_id": null,
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "Uppdrag inom förenings- och näringsliv",
+
+            "uppgift": [
+
+              "Ledamot, Vänsterpartiets partistyrelse 18-. Ledamot, Vänsterpartiets programkommission 98-08 och 12-16, och ordförande 04-08 och 14-16.  "
+
+            ],
+
+            "typ": "biografi",
+
+            "intressent_id": null,
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "Litteratur",
+
+            "uppgift": [
+
+              "Rasismer i Europa, Agora (04, tillsammans med andra). Skyll på demokratin - Eliten, EMU-segern och vänsterns nya uppgifter (04, tillsammans med andra). Från förvirring till förändring - tio röster om behovet av en radikal vänster (05, tillsammans med andra). Agenda - julafton för allt reaktionärt, bloggtexter i urval (06). Högerns svarta bok (10, tillsammans med andra)."
+
+            ],
+
+            "typ": "biografi",
+
+            "intressent_id": null,
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "Officiell e-postadress",
+
+            "uppgift": [
+
+              "ali.esbati[på]riksdagen.se"
+
+            ],
+
+            "typ": "eadress",
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "Tjänstetelefon",
+
+            "uppgift": [
+
+              "65022"
+
+            ],
+
+            "typ": "telefonnummer",
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "sv",
+
+            "uppgift": [
+
+              "Ekonom."
+
+            ],
+
+            "typ": "titlar",
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "en",
+
+            "uppgift": [
+
+              {}
+
+            ],
+
+            "typ": "titlar",
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623"
+
+          },
+
+          {
+
+            "kod": "KandiderarINastaVal",
+
+            "uppgift": [
+
+              "true"
+
+            ],
+
+            "typ": "val",
+
+            "intressent_id": "014386615025",
+
+            "hangar_id": "2343623"
+
+          }
+
+        ]
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,23 +1,46 @@
-import unittest
+import json
+from unittest.mock import Mock
 
+import pytest
 import riksdagen
 
 
-class test_riksdagen(unittest.TestCase):
-    def test_extract(self):
-        assert False
+@pytest.fixture
+def api_fixture():
+    mock_api = Mock(spec=riksdagen.API)
+    return mock_api
 
-    def test_get(self):
-        assert False
 
-    def test_get_ledamoten(self):
-        assert False
+def get_data():
+    with open('data.json') as json_file:
+        return json.load(json_file)
 
-    def test_get_voteringar(self):
-        assert False
 
-    def test_get_anforande(self):
-        assert False
+def test_extract(api_fixture):
+    data = get_data()
+    person_data = data['personlista']['person']
 
-if __name__ == '__main__':
-    unittest.main()
+    hangar_id = api_fixture.extract(person_data, 'hangar_id')
+    assert hangar_id == '2343623'
+
+    weird = api_fixture.extract(person_data, '123456789')
+    assert weird is None
+
+
+def test_get_elected(api_fixture):
+    api_fixture._get.return_value = get_data()
+
+    elected = api_fixture.get_elected()  # Should return a lot more usually
+
+    assert api_fixture._get.assert_called_once()
+    assert elected is not None
+    assert elected[0].tilltalsnamn == 'Ali'
+
+
+
+#def test_get_vote(api_fixture):
+#    assert False
+
+
+#def test_get_speech(api_fixture):
+#    assert False

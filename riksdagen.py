@@ -1,11 +1,16 @@
-import requests
-import logging
+import requests, logging
+
+from vote import Vote
+from speech import Speech
+from elected import Elected
+
 from enum import Enum
 from typing import Dict
 
 logging.basicConfig(level=logging.ERROR)
 
-class Parti(Enum):
+
+class Party(Enum):
     V = 0
     S = 1
     MP = 2
@@ -17,58 +22,22 @@ class Parti(Enum):
     NYD = 8
 
 
-parti_namn: Dict[Parti, str] = {
-    Parti.V: "Vänsterpartiet",
-    Parti.S: "Sveriges socialdemokratiska arbetareparti",
-    Parti.MP: "Miljöpartiet de gröna",
-    Parti.L: "Liberalerna",
-    Parti.C: "Centerpartiet",
-    Parti.M: "Moderata samlingspartiet",
-    Parti.SD: "Sverigedemokraterna",
-    Parti.KD: "Kristdemokraterna",
-    Parti.NYD: "Ny demokrati"
+party_name: Dict[Party, str] = {
+    Party.V: "Vänsterpartiet",
+    Party.S: "Sveriges socialdemokratiska arbetareparti",
+    Party.MP: "Miljöpartiet de gröna",
+    Party.L: "Liberalerna",
+    Party.C: "Centerpartiet",
+    Party.M: "Moderata samlingspartiet",
+    Party.SD: "Sverigedemokraterna",
+    Party.KD: "Kristdemokraterna",
+    Party.NYD: "Ny demokrati"
 }
 
 riksmoten = ['1993/94', '1994/95', '1995/96', '1996/97', '1997/98', '1998/99', '1999/2000', '2000/01',
              '2001/02', '2002/03', '2003/04', '2004/05', '2005/06', '2006/07', '2007/08', '2008/09', '2009/10',
              '2010/11', '2011/12', '2012/13', '2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19',
              '2019/20']
-
-class Votering:
-    def __init__(self, data):
-        self.data = data
-        self.namn = API.extract(data, 'namn')
-        #self.ja = API.extract(data, 'Ja')
-        #self.nej = API.extract(data, 'Nej')
-        #self.franfarande = API.extract(data, 'Frånvarande')
-        #self.avstar = API.extract(data, 'Avstår')
-
-    def print(self):
-        print(f'{self.namn}')
-
-
-class Person:
-    def __init__(self, data):
-        self.data = data
-        self.tilltalsnamn = API.extract(data, 'tilltalsnamn')
-        self.efternamn = API.extract(data, 'efternamn')
-        self.parti = API.extract(data, 'parti')
-        self.kon = API.extract(data, 'kon')
-        self.fodd_ar = API.extract(data, 'fodd_ar')
-
-    def print(self):
-        print(f'{self.tilltalsnamn} {self.efternamn} ({self.parti})')
-
-class Anforande:
-    def __init__(self, data):
-        self.data = data
-        self.avsnittsrubrik = API.extract(data, 'avsnittsrubrik')
-        self.talare = API.extract(data, 'talare')
-        self.parti = API.extract(data, 'parti')
-        self.replik = API.extract(data, 'replik')
-
-    def print(self):
-        print(f'{self.talare} om {self.avsnittsrubrik}. Replik: {self.replik}')
 
 
 class API:
@@ -77,7 +46,11 @@ class API:
 
     @staticmethod
     def extract(data, param):
-        if not data or not data[param]:
+        try:
+            if not data or not data[param]:
+                return None
+        except KeyError:
+            logging.warning(f'Got nasty key error when asking for key {param} in our data.')
             return None
 
         value = data[param]
@@ -101,44 +74,49 @@ class API:
         logging.info(f'Successfully got data')
         return data
 
-    def get_ledamoten(self, tilltalsnamn='', efternamn='', kon=''):
+    def get_elected(self, tilltalsnamn='', efternamn='', kon=''):
         data = self._get(self.url, 'personlista',
-                             {'fnamn': tilltalsnamn, 'enamn': efternamn, 'kn': kon,
-                              'utformat' : 'json', 'sort': 'sorteringsnamn', 'sortorder': 'asc'})
+                         {'fnamn': tilltalsnamn, 'enamn': efternamn, 'kn': kon,
+                          'utformat': 'json', 'sort': 'sorteringsnamn', 'sortorder': 'asc'})
         if not data:
             return
         person_list = []
-        for person_data in data['person']:
-            person_list.append(Person(person_data))
+        if data['@hits'] == '0':
+            logging.warning(f'No data for.')
+        elif data['@hits'] == '1':
+            person_list.append(Elected(data['person']))
+        else:
+            for person_data in data['person']:
+                person_list.append(Elected(person_data))
 
         return person_list
 
-    def get_voteringar(self, rm='', hangar_id='', bet='', punkt='', parti='', valkrets='', rost='', antal=500, gruppering=''):
+    def get_vote(self, rm='', hangar_id='', bet='', punkt='', parti='', valkrets='', rost='', antal=500, gruppering=''):
 
         data = self._get(self.url, 'voteringlista',
-                            {'hangar_id': hangar_id, 'rm': rm, 'bet': bet, 'punkt': punkt, 'parti': parti, 'valkrests': valkrets, 'iid': '',
-                             'rost': rost, 'sz': antal, 'utformat': 'json', 'gruppering': gruppering, })
+                         {'hangar_id': hangar_id, 'rm': rm, 'bet': bet, 'punkt': punkt, 'parti': parti,
+                          'valkrests': valkrets, 'iid': '', 'rost': rost, 'sz': antal, 'utformat': 'json',
+                          'gruppering': gruppering, })
 
         vote_list = []
         if data['@antal'] == '0':
             logging.warning(f'No data for.')
         elif data['@antal'] == '1':
-            vote_list.append(Votering(data['votering']))
+            vote_list.append(Vote(data['votering']))
         else:
             for vote_data in data['votering']:
-                vote_list.append(Votering(vote_data))
+                vote_list.append(Vote(vote_data))
 
         return vote_list
 
-    def get_anforande(self, rm='', parti='', anftyp='', antal=100):
+    def get_speech(self, rm='', parti='', anftyp='', antal=100):
         anforande_list = []
         data = self._get(self.url, 'anforandelista',
-                             {'rm': rm, 'parti': parti, 'anftyp': anftyp,
-                              'utformat' : 'json', 'sz': antal})
+                         {'rm': rm, 'parti': parti, 'anftyp': anftyp, 'utformat': 'json', 'sz': antal})
 
         # Only special rule for a party, hate it. Because Folkpartiet changed name to Libreralerna
-        if parti == Parti.L.name:
-            anforande_list += self.get_anforande(rm=rm, parti='FP', anftyp=anftyp, antal=antal)
+        if parti == Party.L.name:
+            anforande_list += self.get_speech(rm=rm, parti='FP', anftyp=anftyp, antal=antal)
 
         if not data:
             return anforande_list
@@ -146,13 +124,9 @@ class API:
         if data['@antal'] == '0':
             logging.warning(f'No data for {rm}, {parti}, {anftyp}')
         elif data['@antal'] == '1':
-            anforande_list.append(Anforande(data['anforande']))
+            anforande_list.append(Speech(data['anforande']))
         else:
             for anforande_data in data['anforande']:
-                anforande_list.append(Anforande(anforande_data))
+                anforande_list.append(Speech(anforande_data))
 
         return anforande_list
-
-
-
-
